@@ -182,7 +182,29 @@ class Graph:
 
         This should be done using recursion.
         """
-        pass  # TODO
+        # create a set to store visited vertices
+        visited = set()
+        # set empty path list
+        path = []
+
+        def search(starting_vertex, destination_vertex):
+            # is this vertex the target?
+            if starting_vertex == destination_vertex:
+                path.insert(0, starting_vertex)
+                return True
+            
+            for v in self.get_neighbors(starting_vertex):
+                # check if the vertex has not been visited
+                if v not in visited:
+                    # add v to visited
+                    visited.add(v)
+                    if search(v, destination_vertex):
+                        # Insert into path list
+                        path.insert(0, starting_vertex)
+                        return True
+        
+        search(starting_vertex, destination_vertex)
+        return path
 
 if __name__ == '__main__':
     graph = Graph()  # Instantiate your graph
