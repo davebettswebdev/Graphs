@@ -12,7 +12,7 @@
 ## Projects
 
 ### Day 1
-* [Graph Traversal and Search](projects/graph)
+* [Graph Traversal and Search](projects/graph) - COMPLETE
 
 ### Day 2
 * [Earliest Ancestor](projects/ancestor)
@@ -22,3 +22,5 @@
 
 ### Day 4
 * [Adventure Map Traversal](projects/adventure)
+
+.
