@@ -52,7 +52,7 @@ while len(visited) < len(room_graph):
         # Remove pervious direction
         visited[player.current_room.id].remove(prev_direction)
 
-    # If the length of the paths associated with the room is 0, then all the paths have been explored
+    # If the length of the paths associated with the room is 0, then all the paths for that room have been explored
     if len(visited[player.current_room.id]) == 0: 
         # Backtrack each previous room
         prev_direction = reverse_path[-1] 
